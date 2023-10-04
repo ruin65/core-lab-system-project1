@@ -1,0 +1,147 @@
+/* 设置整个页面的渐变背景色 */
+html {
+    background: linear-gradient(to bottom, #FFF6DD,#AAC4EB,#DEFCD4);
+    width: 100%; /* 设置视频宽度为100%，填充整个容器 */
+    height: 100%; /* 设置视频高度为100%，填充整个容器 */
+    object-fit: cover; /* 如果视频尺寸与容器不匹配，保持比例并填充容器 */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+.back img {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+    width: 5%;
+    height: 9%;
+
+}
+
+
+.monday img {
+    position: absolute;
+    top: 31%;
+    left: 18%;
+    width: 65%;
+    height: 43%;
+    z-index: 1;
+
+}
+
+.title{
+    position: absolute;
+    top: 48%;
+    left: 75%;
+    font-weight:normal;
+ 
+
+}
+
+
+
+
+.circle {
+    width: 20px;
+    height: 20px;
+    background-color: #169C00;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 3;
+}
+
+
+
+.circle1 {
+    position: absolute;
+    top: 43%;
+    left: 31%;
+
+}
+
+.circle2 {
+    position: absolute;
+    top: 38.8%;
+    left: 68.5%;
+
+}
+
+
+
+.circle.active {
+    transform: scale(2);
+    background-color: #038FDC; /* 点击后变颜色 */
+}
+
+.hidden-content {
+    display: none;
+    margin-top: 20px;
+}
+
+.circle.active + .hidden-content {
+    display: block; /* 与点击的圆点关联的文本内容和图片显示 */
+}
+
+
+ /* 初始状态下隐藏固定图片 */
+ #fixed-image1 {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 12%;
+    z-index: 1;
+}
+
+#fixed-image2 {
+    display: none;
+    position: absolute;
+    top: 73.5%;
+    left: 77.5%;
+    z-index: 1;
+}
+
+
+
+
+.c1{
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 22.2%;
+    z-index: 2;
+
+}
+
+.c2{
+    display: none;
+    position: absolute;
+    top: 36%;
+    left: 59.5%;
+    z-index: 2;
+
+}
+
+
+
+.shared-p{
+    font-size: 28px;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+    position: absolute;
+    top: 70.5%;
+    left: 11.8%;
+    z-index: 2.5;
+
+
+}

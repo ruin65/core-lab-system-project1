@@ -1,0 +1,355 @@
+/* 设置整个页面的渐变背景色 */
+html {
+    background: linear-gradient(to bottom, #fad6cc,#d0f9bb);
+    width: 100%; /* 设置视频宽度为100%，填充整个容器 */
+    height: 100%; /* 设置视频高度为100%，填充整个容器 */
+    object-fit: cover; /* 如果视频尺寸与容器不匹配，保持比例并填充容器 */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+
+/* 设置标志的样式 */
+#menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.menu-bar {
+    width: 30px;
+    height: 4px;
+    background-color: #ba6363;
+    margin: 6px 0;
+    z-index: 99;
+}
+
+/* 定义弹窗的样式 */
+#popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(132, 85, 85, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+/* 定义弹窗内选项的样式 */
+.popup-option {
+    margin: 20px;
+    z-index: 99;
+    margin-bottom: 40px;
+}
+
+.mountain img:hover  {
+    cursor: url("cursor.png"), auto;
+}
+
+
+/* 调整图片样式 */
+.image1 img {
+    position: absolute;
+    top: 78%;
+    left: 1%;
+    width: 45%;
+    height: 25%;
+    z-index: 60;
+}
+
+.image1:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image1 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image1:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+
+.image2 img{
+    position: absolute;
+    top: 75%;
+    left: 60%;
+    width: 40%;
+    height: 25%;
+    z-index:5;
+}
+
+.image2:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image2 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image2:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+.image3 img{
+    position: absolute;
+    top: 63%;
+    left: -1%;
+    width: 32%;
+    height: 30%;
+    z-index:4;
+}
+
+.image3:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image3 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image3:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+.image4 img{
+    position: absolute;
+    top: 67%;
+    left: 34%; /* 调整图片的左侧位置 */
+    width: 30%;
+    height: 20%;
+    z-index:3;
+}
+
+.image4 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image4:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image4:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+
+.image5 img{
+    position: absolute;
+    top: 55%;
+    left: 49%;
+    width: 40%;
+    height: 20%;
+    z-index:2;
+}
+
+.image5:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image5 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image5:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+.image6 img{
+    position: absolute;
+    top: 45%;
+    left: 0%; /* 调整图片的左侧位置 */
+    width: 35%;
+    height: 30%;
+    z-index:1;
+}
+
+.image6 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image6:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image6:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+.image7 img {
+    position: absolute;
+    top: 40%;
+    left: 56%; /* 调整图片的左侧位置 */
+    width: 45%;
+    height: 30%;
+    z-index:0;
+}
+
+.image7:hover img
+{
+    filter: brightness(0.8); /* 改变图片亮度 */
+    scale: 1.1;
+}
+
+.image7 .hover-text {
+    display: none; /* 默认情况下，隐藏文本 */
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    padding: 5px;
+    font-size: 45px;
+    color: black;
+    font-weight: bold;
+    z-index: 1; /* 确保文本在图片上方显示 */
+}
+
+.image7:hover .hover-text {
+    display: block; /* 鼠标悬停时显示文本 */
+}
+
+
+.image8 img {
+    position: absolute;
+    top: 15%;
+    left: -10%; /* 调整图片的左侧位置 */
+    width: 70%;
+    height: 70%;
+    z-index: -1;
+}
+
+.image9 img {
+    position: absolute;
+    top: 13%;
+    left: 60%; /* 调整图片的左侧位置 */
+    width: 50%;
+    height: 55%;
+    z-index:-1;
+}
+
+.image10 img {
+    position: absolute;
+    top: 66%;
+    left: -5%; /* 调整图片的左侧位置 */
+    width: 120%;
+    height: 45%;
+    z-index:-1;
+}
+
+.image11 img {
+    position: absolute;
+    top: 8%;
+    left: 75%; /* 调整图片的左侧位置 */
+    width: 10.8%;
+    height: 15%;
+    z-index:1;
+}
+
+.image12 img {
+    position: absolute;
+    top: 7%;
+    left: 10%; /* 调整图片的左侧位置 */
+    width: 20%;
+    height: 15%;
+    z-index:1;
+}
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* 图像容器的高度 */
+    overflow: hidden; /* 隐藏超出容器的部分 */
+}
+
+.moving-image {
+    position: absolute;
+    top: 51%;
+    width: 10%; /* 图像的宽度 */
+    left: 55%; /* 初始位置在左侧 */
+    animation: moveImage 8s linear infinite alternate; /* 使用动画控制图像移动 */
+}
+
+@keyframes moveImage {
+    0% {
+        left: 55%;
+    }
+    100% {
+        left: calc(100% - 8%); /* 图像右侧边界 */
+    }
+}

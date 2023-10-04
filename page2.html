@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week Data</title>
+    <link rel="stylesheet" type="text/css" href="page2.css">
+    <style>
+        /* 初始状态下隐藏固定图片 */
+        .fixed-image {
+            display: none;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="home.html">
+            <img src="back.png" alt="back">
+        </a>
+    </div>
+
+    <div class="monday">
+        <img src="tuesday.png" alt="mon">
+    </div>
+
+    <div class="title">
+        <h>TUESDAY</h> 
+    </div>
+
+   <!-- 创建五个小圆点 -->
+   <div class="circle circle1" onclick="toggleContent(1)"></div>
+   <div class="circle circle2" onclick="toggleContent(2)"></div>
+
+    <!-- 创建两个固定的图片 -->
+    <div class="fixed-image" id="fixed-image1">
+        <img src="sjz.png" alt="fixed-image1">
+    </div>
+   
+   <div class="fixed-image" id="fixed-image2">
+        <img src="smile.png" alt="fixed-image2">
+   </div>
+
+   <!-- 创建与圆点相关联的文本内容和图片 -->
+   <div class="hidden-content" id="content1">
+        <img src="1110.png"  class="c1">
+        <p class="shared-p">Time: 11:00AM-11:10AM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Keywords: weight loss &nbsp;&nbsp;&nbsp; Mood: 90% 
+        </p>
+   </div>
+
+   <div class="hidden-content" id="content2">
+    <img src="930.png" class="c2">
+    <p class="shared-p">Time: 9:30PM-10:00PM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Keywords: daily vlog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Mood: 85% 
+    </p>
+   </div>
+
+
+
+
+
+
+
+   <!-- 其他隐藏内容的定义 -->
+
+   <script>
+         // 获取所有圆点元素
+         const circles = document.querySelectorAll('.circle');
+
+// 获取所有隐藏内容元素
+const hiddenContents = document.querySelectorAll('.hidden-content');
+
+// 获取所有图像类名
+const imageClasses = ['c1', 'c2', 'c3', 'c4']; // 您的图像类名
+
+// 获取两个固定的图片元素
+const fixedImage1 = document.getElementById('fixed-image1');
+        const fixedImage2 = document.getElementById('fixed-image2');
+
+
+// 遍历所有圆点元素并为它们添加点击事件处理程序
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        // 隐藏所有隐藏内容元素
+        hiddenContents.forEach(content => {
+            content.style.display = 'none';
+        });
+
+        // 显示与当前圆点相关联的隐藏内容
+        const contentToDisplay = document.getElementById(`content${index + 1}`);
+        contentToDisplay.style.display = 'block';
+
+        // 显示或隐藏相应的图像类
+        imageClasses.forEach(className => {
+            const imageToDisplay = document.querySelector(`#content${index + 1} .${className}`);
+            if (imageToDisplay) {
+                imageToDisplay.style.display = 'block';
+            }
+        });
+
+
+    // 显示固定的图片
+    fixedImage1.style.display = 'block'; // 显示第一个固定图片
+                fixedImage2.style.display = 'block'; // 显示第二个固定图片
+
+
+        // 移除所有圆点的 active 类
+        circles.forEach(c => {
+            c.classList.remove('active');
+        });
+
+        // 添加当前圆点的 active 类
+        circle.classList.add('active');
+    });
+});
+   </script>
+</body>
+</html>

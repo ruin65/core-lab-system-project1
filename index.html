@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* CSS 样式 */
+        body {
+            /* font-family: ;*/
+            background-color: #FFF6DD;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 90vh;
+            opacity: 1; /* 设置初始不透明度为1 */
+            transition: opacity 0.5s; /* 设置淡出动画过渡属性 */
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 20px;
+           
+        }
+
+        p {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: light;
+            margin-left: 420px;
+            margin-right: 420px;
+            display: flex; /* 使用 Flexbox 布局 */
+    justify-content: right; /* 居中对齐标签 */
+    align-items: right; /* 垂直居中对齐标签 */
+        }
+
+        #startButton {
+            background-color: #525252;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.5s;
+            align-items: center;
+            font-weight: light;
+            margin-left: 600px;
+            margin-right: 600px;
+        }
+
+        #startButton:hover {
+            background-color: #a6a6a6;
+            scale: 1.2;
+        }
+
+        /* 添加淡出动画 */
+        .fadeOut {
+            opacity: 0; /* 设置透明度为0 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <p>
+        This is my data recording website for 'the red book'! This site logs my favorite posts on 'the red book' over a week.
+        <br><br>
+        Simply hit 'start,' and you'll encounter seven mountains, each symbolizing a day of the week on the homepage. Click on a mountain to access the corresponding day's content, and click on the green dot on that page to access detailed data. 
+        <br><br> 
+        Don't worry if you forget the steps; you can always find the instruction tucked away in the top right corner of the homepage for quick reference.
+        <br><br>       
+        Enjoy exploring my website!
+    </p>
+    <button id="startButton" onclick="startNextPage()">START</button>
+
+    <script>
+        // JavaScript 代码用于处理按钮点击事件
+        function startNextPage() {
+            // 添加淡出动画类
+            document.body.classList.add('fadeOut');
+
+            // 在动画结束后跳转到下一个页面
+            setTimeout(function() {
+                window.location.href = 'home.html'; // 替换 'next_page.html' 为您要跳转的页面
+            }, 900); // 这里的500表示淡出动画持续时间，以毫秒为单位
+        }
+    </script>
+</body>
+</html>
+
